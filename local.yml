@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: renee-ThinkPad-13
   become: true
   tasks:
   - name: Install packages
