@@ -1,5 +1,6 @@
-- hosts: renee-ThinkPad-13
+- hosts: localhost
   become: true
+  key_file=/home/renee/.ssh/github_id
   tasks:
   - name: Install packages
     apt: name={{item}}
