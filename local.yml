@@ -8,4 +8,5 @@
   - apt_repository:
       repo: ppa:wireshark-dev/stable
       state: present
+  - include: tasks/users.yml
   - include: tasks/packages.yml
