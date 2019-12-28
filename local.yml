@@ -1,7 +1,12 @@
 - hosts: localhost
   become: true
   tasks:
+  - apt_repository:
+      repo: ppa:wireshark-dev/stable
+      state: present
   - name: Install htop
     apt: 
       name: htop
-    
+  - name: Install Wireshark
+    apt:
+      name: wireshark    
