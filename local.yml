@@ -1,6 +1,10 @@
 - hosts: localhost
   become: true
-  key_file=/home/renee/.ssh/github_id
+  pre_tasks:
+    name: Update rapositories
+    apt: update_cache=yes
+    changed_when: False
+
   tasks:
   - name: Install packages
     apt: name={{item}}
