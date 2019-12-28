@@ -8,6 +8,6 @@
   tasks:
   - name: Install packages
     apt: name={{item}}
-    with items:
+    with_items:
       - htop
       - tmux
