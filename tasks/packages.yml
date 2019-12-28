@@ -1,6 +1,12 @@
-- name: Install htop
-  apt: 
-    name: htop
 - name: Install Wireshark
   apt:
     name: wireshark    
+- name: VirtualBox
+  apt:
+    name: virtualbox
+- name: VirtualBox Extension Package
+  apt:
+    name: virtualbox-ext-pack
+- name: PyCharm
+  apt:
+    name: pycharm-community
