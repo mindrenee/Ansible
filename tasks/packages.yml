@@ -1,12 +1,32 @@
-- name: Install Wireshark
+- name: Install basic packages
   apt:
-    name: wireshark    
-- name: VirtualBox
+    name: '{{item}}'
+    update_cache: yes
+  with_items:
+    - gnome-tweak-tool
+    - build-essential
+  tags: software
+
+- name: Install Network Analyzing
   apt:
-    name: virtualbox
-- name: VirtualBox Extension Package
+    name: wireshark
+  tags: software
+    
+- name: Install VirtualBox with Adds
   apt:
-    name: virtualbox-ext-pack
-- name: PyCharm
+    name: '{{iten}}'
+    update_cache: yes
+  with_items:
+    - virtualbox
+    - virtualbox-ext-pack
+  tags: software
+
+- name: Python Dev tools
   apt:
-    name: pycharm-community
+    name: '{{item}}'
+    update_cache: yes
+  with_items:
+    - python3-dev
+    - python3-pip
+    - python3-virtualenv
+    - pycharm-community
