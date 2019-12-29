@@ -1,4 +1,5 @@
-# Ansible config playbook for workstation
+# Ansible config playbook for Ubuntu 18.04 workstation
+Ansible setup for my study and dev laptop
 
 ## Install Ansible on workstation
 ```
