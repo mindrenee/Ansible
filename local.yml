@@ -7,10 +7,8 @@
   tasks:
   - apt_repository:
       repo: ppa:wireshark-dev/stable
-      state: present
   - apt_repository:
       repo: ppa:mystic-mirage/pycharm
-      state: present
   - include: tasks/users.yml
   - include: tasks/packages.yml
   - include: tasks/cron.yml
